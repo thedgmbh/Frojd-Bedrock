@@ -1,0 +1,29 @@
+$mainFont: #063C51;
+$activeFont: #2C90AB;
+$tealColor: #37D3CA;
+$greenColor: #89E1B0;
+$whiteColor: #fff;
+$gradientColor: linear-gradient(76deg,HSLA(176,80%,46%,19),#89e1b0);
+
+@mixin headings($from: 1, $to: 6){
+    @for $i from $from through $to{
+      h#{$i}{
+        @content
+      }
+    }
+}
+
+@mixin admin-sticky-fix( $offset: 0 ) {
+  $narrow-offset: 46px;
+  $wide-offset: 77px !important;
+  @if $offset != 0 and type-of($offset) == 'number' {
+    $narrow-offset: $narrow-offset + $offset;
+    $wide-offset: $wide-offset + $offset;
+  }
+  .admin-bar & {
+    top: $narrow-offset;
+    @media screen and (min-width: 783px) {
+      top: $wide-offset;
+    }
+  }
+}

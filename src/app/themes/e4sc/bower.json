@@ -1,0 +1,30 @@
+{
+  "name": "e4sc",
+  "homepage": "https://e4sc.org/",
+  "authors": [
+    "The D. GmbH <info@thed.io>",
+    "Haider Ghaleb <haider.ghaleb@thed.io"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "components-font-awesome": "^4.7.0"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/javascripts/bootstrap.min.js",
+        "assets/javascripts/bootstrap/carousel.js",
+        "assets/javascripts/bootstrap/transition.js"
+      ]
+    },
+    "components-font-awesome": {
+      "main": [
+        "./scss/font-awesome.scss",
+        "./fonts/*"
+      ]
+    }
+  }
+}
